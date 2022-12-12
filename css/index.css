@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: aqua;
+}
+
+.logo{
+  width: 100px;
+  margin-right: 20px;
+}
+.pincode{
+  /* background: red; */
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.pincode *, .account *, .orders * , .cart{
+  margin: 0;
+  padding: 0;
+}
+.pincode i{
+  font-size: 20px;
+  margin-right: 10px;
+}
+.pincode .Dist, .account .acclist, .orders .orderList{
+  font-size: 15px;
+  font-weight: bold;
+}
+.account ,.orders{
+  color: white;
+  font-size: 12px;
+  margin-right: 10px;
+  width: 130px;
+}
+
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+.catagory-box *{
+  background: cyan;
+  padding: 5px;
+}
+
+
+@media (max-width: 1345px)  {
+  form{
+    width: 400px !important
+  }
+}
+@media (max-width: 1253px)  {
+  form{
+    width: 300px !important
+  }
+  .allProd{
+    width: 120px !important
+  }
+  .allLang{
+    width: 120px !important
+  }
+}
+@media (max-width: 1168px)  {
+  form{
+    width: 180px !important
+  }
+  .allProd{
+    width: 100px !important
+  }
+  .allLang{
+    width: 100px !important
+  }
+  form button{
+    display: none !important
+  }
+  form input{
+    width: 100% !important;
+  }
+}
+@media (max-width: 992px)  {
+  form{
+    width: 500px !important
+  }
+  form button{
+    display: block !important
+  }
+  form input{
+    width: 80% !important;
+  }
+  .allProd{
+    width: 150px !important;
+    padding: 0 !important;
+  }
+  .allLang{
+    width: 150px !important;
+    padding: 0 !important;
+  }
+  .cart{
+    justify-content: start;
+  }
+  .lastItemDiv{
+    display: none;
+  }
+}
+@media (max-width: 600px)  {
+  form{
+    width: 300px !important
+  }
+}
+@media (max-width: 576px)  {
+  .laptop{
+    /* width: 300px !important */
+  }
+}
