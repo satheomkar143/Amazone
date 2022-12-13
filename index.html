@@ -7,9 +7,14 @@
   <link rel="stylesheet" href="css/index.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="/image/Amazon_icon.png">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+  <link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +23,7 @@
 </head>
 <body>
   <!-- -----------------navbar start---------------------------- -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: sticky;top: 0;right: 0;left: 0; z-index: 5000;">
+  <nav  class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: sticky;top: 0;right: 0;left: 0; z-index: 5000;">
    
     <img class="logo" src="image/amazonLogo.png" alt="">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,15 +34,15 @@
 
       <div class="pincode text-white ms-4" >
         <i class="fa-solid fa-location-dot text-warning"></i>
-        <div>
+        <div data-toggle="modal" data-target="#LocationModal" style="cursor:pointer">
           <p>Deliver to Omkar</p>
           <p class="Dist">Kagal 416235</p>
         </div>
       </div>
 
-      <div class="col-auto my-1 allProd" style="max-width: 140px;">
-        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+      <div class="col-auto my-1 allProd" style="max-width: 140px;" >
+        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect" >Preference</label>
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="cursor:pointer">
           <option selected>All</option>
           <option value="1">Baby</option>
           <option value="2">beauty</option>
@@ -56,7 +61,7 @@
 
       <div class="col-auto my-1 allLang" style="max-width: 140px;">
         <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="cursor:pointer">
           <option selected>language</option>
           <option value="1">English</option>
           <option value="2">Marathi</option>
@@ -64,17 +69,17 @@
         </select>
       </div>
 
-      <div class="account">
-          <p>Hello, omkar</p>
+      <div class="account" style="cursor:pointer" data-toggle="modal" data-target="#userSignInOut">
+          <p>Hello, Sign In</p>
           <p class="acclist">Account & lists</p>
       </div>
 
-      <div class="orders">
-          <p>Hello, omkar</p>
-          <p class="orderList">Account & lists</p>
+      <div class="orders" style="cursor:pointer">
+          <p>Returns</p>
+          <p class="orderList">& Orders</p>
       </div>
 
-      <div class="cart ">
+      <div class="cart " style="cursor:pointer">
         <i class="fa-solid fa-cart-plus"></i>
         <div>Cart</div>
       </div>
@@ -84,7 +89,7 @@
   </nav>
   <!-- -----------------navbar end---------------------------- -->
   <!-- ----------------------carousel start--------------------- -->
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" >
+  <div id="top" id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" >
     <!-- <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -135,45 +140,237 @@
     </button>
   </div>
   <!-- ----------------------carousel end--------------------- -->
-  <div class="container-fluid">
-    <div class="row catagory-box" style="max-height: 500px; min-height: 500px;">
+
+  <!-- ------------sliding menu start------------------ -->
+  <div class="wrapper" id="top" >
+    <div class="icon" ><i id="left" class="material-icons sliderArrow">chevron_left</i></div>
+
+    <div class="tabs-box">
+      <div class="tab" id="cpp">
+        <img src="image/mobile.png" alt="">
+        <h6>smartphones</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/laptop.png" alt="">
+        <h6>laptops</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/fragrances.png" alt="">
+        <h6>fragrances</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/skincare.png" alt="">
+        <h6>skincare</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/groceries.png" alt="">
+        <h6>groceries</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/home-decoration.png" alt="">
+        <h6>home-decoration</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/furniture.png" alt="">
+        <h6>furniture</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/tops.png" alt="">
+        <h6>tops</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/womenDress.png" alt="">
+        <h6>womens-dresses</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/womens-shoes.png" alt="">
+        <h6>womens-shoes</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/mens-shirts.png" alt="">
+        <h6>mens-shirts</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/mens-shoes.png" alt="">
+        <h6>mens-shoes</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/mens-watches.png" style="object-fit: fill;" alt="">
+        <h6>mens-watches</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/womens-watches.png" alt="">
+        <h6>womens-watches</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/womens-bags.png"  alt="">
+        <h6>womens-bags</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/womens-jewellery.png" alt="">
+        <h6>womens-jewellery</h6>
+      </div>
+      <div class="tab" id="cpp">
+        <img src="image/sunglasses.png" style="object-fit: fill;" alt="">
+        <h6>sunglasses</h6>
+      </div>      
+    </div>
+    <div class="icon" ><i id="right" class="material-icons sliderArrow">navigate_next</i></div>
+    
+  </div>
+  <!-- ------------sliding menu end------------------ -->
+
+  <!-- -------------------square list start--------------------- -->
+  <div class="container-fluid squareBlock">
+    <div class="row catagory-box" style=" min-height: 500px;">
       <div class="col-xl-4 col-lg-4 col-md-6 	col-sm-12 col-12" style="min-height:500px;">
-        <h4>Keep shopping for</h4>
-        <div class="laptop d-flex" style="flex-wrap: wrap; height: 90%; background-color: red;">
-          <div class="bg-dark " style="width: 50%; height: 50%;"></div>
+        <h5>Keep shopping for</h5>
+        <div class="laptop d-flex" style="flex-wrap: wrap; height: 90%; ">
+          <div class="bg-light " style="width: 50%; height: 50%;"></div>
           <div class="bg-light " style="width: 50%;height: 50%;"></div>
           <div class="bg-light " style="width: 50%;height: 50%;"></div>
-          <div class="bg-dark " style="width: 50%;height: 50%;"></div>
+          <div class="bg-light " style="width: 50%;height: 50%;"></div>
         </div>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 	col-sm-12 col-12"  style="min-height:500px;">
-        <h4>Keep shopping for</h4>
-        <div class="laptop d-flex" style="flex-wrap: wrap; height: 90%; background-color: red;">
-          <div class="bg-dark " style="width: 50%; height: 50%;"></div>
-          <div class="bg-light " style="width: 50%;height: 50%;"></div>
-          <div class="bg-light " style="width: 50%;height: 50%;"></div>
-          <div class="bg-dark " style="width: 50%;height: 50%;"></div>
+        <h5>50% - 80% off | Styles for Men</h5>
+        <div class="mensDiv d-flex" style="flex-wrap: wrap; height: 90%; ">
+          <div class="bg-light " style="width: 50%; height: 50%;">
+            <img src="image/mens-shirts.png" alt="">
+            <h6>Shirts</h6>
+          </div>
+          <div class="bg-light " style="width: 50%;height: 50%;">
+            <img src="image/mens-shoes.png" alt="">
+            <h6>Shoes</h6>
+          </div>
+          <div class="bg-light " style="width: 50%;height: 50%;">
+            <img src="image/mens-watches.png" alt="">
+            <h6>Watches</h6>
+          </div>
+          <div class="bg-light " style="width: 50%;height: 50%;">
+            <img src="image/sunglasses.png" alt="">
+            <h6>sunglasses</h6>
+          </div>
         </div>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 lastItemDiv">
-        <h4>Keep shopping for</h4>
-        <div class="laptop d-flex" style="flex-wrap: wrap; height: 90%; background-color: red;">
-          <div class="bg-dark " style="width: 50%; height: 50%;"></div>
-          <div class="bg-light " style="width: 50%;height: 50%;"></div>
-          <div class="bg-light " style="width: 50%;height: 50%;"></div>
-          <div class="bg-dark " style="width: 50%;height: 50%;"></div>
+        <h5>50% - 80% off | Styles for Women</h5>
+        <div class="womenDiv d-flex" style="flex-wrap: wrap; height: 90%; ">
+          <div class="bg-light " style="width: 50%; height: 50%;">
+            <img src="image/womens-jewellery.png" alt="">
+            <h6>jewelry</h6>
+          </div>
+          <div class="bg-light " style="width: 50%;height: 50%;">
+            <img src="image/womens-shoes.png" alt="">
+            <h6>Shoes</h6>
+          </div>
+          <div class="bg-light " style="width: 50%;height: 50%;">
+            <img src="image/womens-bags.png" alt="">
+            <h6>Bags</h6>
+          </div>
+          <div class="bg-light " style="width: 50%;height: 50%;">
+            <img src="image/womens-watches.png" alt="">
+            <h6>Watches</h6>
+          </div>
         </div>
       </div>
      
     </div>
   </div>
-  
+  <!-- ---------------------square list end--------------------- -->
+  <!-----------------------back to top start------------------ -->
+  <div class="container-fluid bg-dark text-white d-flex " style="height: 50px; background: rgb(128, 128, 128); font-size: 1rem; align-items: center; justify-content: center;">
+    <a href="#top" style="text-decoration: none; color: white;"> <p style="margin: 0 !important; user-select: none; cursor: pointer;">Back to Top</p></a>
+  </div>
+  <!-- ---------------------back to top end------------------ -->
+<!-- ---------------------------footer-------------------------- -->
+  <div class="container-fluid footer pt-2 text-white" >
+    <div class="container innerFooter row m-auto">
+      
+        <div class="col-xl-3 col-lg-3 col-md-6 	col-sm-6 col-12 footerColumn" >  
+            <h5>Get to Know Us</h5>
+            <p>About Us</p>
+            <p>Careers</p>
+            <p>Amazon Science</p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 	col-sm-6 col-12 footerColumn " >  
+          <h5>Connect with Us</h4>
+          <p>Facebook</p>
+          <p>Twitter</p>
+          <p>Instagram</p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 	col-sm-6 col-12 footerColumn" >  
+          <h5>Make Money with Us</h3>
+          <p>Sell on Amazon</p>
+          <p>Become an Affiliate</p>
+          <p>Advertise Your Products</p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 	col-sm-6 col-12 footerColumn" >  
+          <h5>Let Us Help You</h5>
+          <p>Your Account</p>
+          <p>100% Purchase Protection</p>
+          <p>Amazon App Download</p>
+        </div>
+    </div>
+  </div>
+  <!-- ---------------------------footer-------------------------- -->
 
+  <!-- ----------------choose location----------------- -->
+  <!-- Modal -->
+<div class="modal fade" id="LocationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:5500">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <h5 class="modal-title " id="exampleModalLabel">Choose Your Location</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="text-align:justify">Select a delivery location to see product availability and delivery options.</p>
+        <p style="text-align: center;">-----enter an Indian pincode-----</p>
+      </div>
 
+      <form class="form-inline ">
+        <div class="form-group mx-sm-3 mb-2 d-flex ">
+          <input type="text" class="form-control" id="userLocation" placeholder="pincode">
+        </div>
+        <button type="submit" class="btn btn-warning  mb-2">Apply</button>
+      </form>
+      <div class="modal-footer bg-light">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----------------choose location end--------------- -->
+
+<!-- ----------------------------sign in out -------------------- -->
+<div class="modal fade" id="userSignInOut" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:5500">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In / Out</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-warning btn-lg btn-block">Sign In</button>
+        <p style="text-align: center;">New customer? <a href="#">Start here.</a></p>
+      </div>
+      <div class="modal-footer bg-light">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----------------------------sign in out end-------------------- -->
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/wrapper.js"></script>
 </body>
 </html>
